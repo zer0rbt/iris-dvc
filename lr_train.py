@@ -1,7 +1,7 @@
 from sklearn.datasets import load_iris
 import pandas as pd
 from sklearn.model_selection import train_test_split
-from sklearn.ensemble import GradientBoostingClassifier
+from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, confusion_matrix
 import json
 import joblib
@@ -10,8 +10,8 @@ import matplotlib.pyplot as plt
 import matplotlib
 import numpy as np
 
-
 matplotlib.use('Agg')
+
 data = load_iris()
 df = pd.DataFrame(data.data, columns=data.feature_names)
 df['target'] = data.target
@@ -20,7 +20,7 @@ df.to_csv('iris_data.csv', index=False)
 
 X_train, X_test, y_train, y_test = train_test_split(df.drop(columns=['target']), df['target'], test_size=0.3)
 
-model = GradientBoostingClassifier()
+model = LogisticRegression(max_iter=200)
 model.fit(X_train, y_train)
 
 y_pred = model.predict(X_test)
@@ -47,7 +47,7 @@ plt.ylabel('True Labels')
 plt.savefig('confusion_matrix.png')
 plt.close()
 
-joblib.dump(model, 'gradient_boosting_model.pkl')
+joblib.dump(model, 'logistic_regression_model.pkl')
 
 metrics["confusion_matrix"] = conf_matrix.tolist()
 with open('metrics.json', 'w') as f:

@@ -1,7 +1,7 @@
 schema: '2.0'
 stages:
   train:
-    cmd: '"C:\Program Files\Python310\python.exe" gb_train.py'
+    cmd: '"C:\Program Files\Python310\python.exe" lr_train.py'
     deps:
     - path: iris_data.csv
       hash: md5
@@ -10,9 +10,9 @@ stages:
     outs:
     - path: confusion_matrix.png
       hash: md5
-      md5: 8f67b5cd2dba33b614f5f03cd7d6fdf8
-      size: 24217
+      md5: 93309530aedbdca4370bd5675eaa179d
+      size: 24007
     - path: metrics.json
       hash: md5
-      md5: e3a5963e0f5bd0e1c3fc3b29acea3f2e
-      size: 185
+      md5: c0bc15265efc5d285e1b965868fc4927
+      size: 125

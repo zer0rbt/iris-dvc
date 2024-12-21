@@ -1,6 +1,6 @@
 stages:
   train:
-    cmd: "\"C:\\Program Files\\Python310\\python.exe\" gb_train.py"
+    cmd: "\"C:\\Program Files\\Python310\\python.exe\" lr_train.py"
     deps:
       - iris_data.csv
     metrics:
