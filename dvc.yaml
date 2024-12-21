@@ -3,7 +3,7 @@ stages:
     cmd: "\"C:\\Program Files\\Python310\\python.exe\" train.py"
     deps:
       - iris_data.csv
-    outs:
-      - model.pkl
     metrics:
       - metrics.json
+    plots:
+      - confusion_matrix.png
