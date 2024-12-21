@@ -1,2 +1,10 @@
 /iris_data.csv
 /random_forest_model.pkl
+/model
+/model.pkl
+/metrics.json
+/confusion_matrix.png
+/metrics_lr.json
+/confusion_matrix_lr.png
+/metrics_gb.json
+/confusion_matrix_gb.png

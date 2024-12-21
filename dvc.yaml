@@ -4,6 +4,6 @@ stages:
     deps:
       - iris_data.csv
     metrics:
-      - metrics.json
+      - metrics_gb.json
     plots:
-      - confusion_matrix.png
+      - confusion_matrix_gb.png
