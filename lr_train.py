@@ -44,11 +44,11 @@ plt.title("Confusion Matrix")
 plt.xlabel('Predicted Labels')
 plt.ylabel('True Labels')
 
-plt.savefig('confusion_matrix.png')
+plt.savefig('confusion_matrix_lr.png')
 plt.close()
 
 joblib.dump(model, 'logistic_regression_model.pkl')
 
 metrics["confusion_matrix"] = conf_matrix.tolist()
-with open('metrics.json', 'w') as f:
+with open('metrics_lr.json', 'w') as f:
     json.dump(metrics, f)

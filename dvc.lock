@@ -8,11 +8,11 @@ stages:
       md5: 21d441a28bce4417276097df955afc50
       size: 2928
     outs:
-    - path: confusion_matrix.png
+    - path: confusion_matrix_lr.png
       hash: md5
-      md5: 93309530aedbdca4370bd5675eaa179d
-      size: 24007
-    - path: metrics.json
+      md5: b9d5e104c8437e67d1c8b97671a5fa8e
+      size: 24190
+    - path: metrics_lr.json
       hash: md5
-      md5: c0bc15265efc5d285e1b965868fc4927
-      size: 125
+      md5: aba762999a95c0d54e923449ed39267e
+      size: 185
